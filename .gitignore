@@ -1,0 +1,68 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# Java / Maven (Spring Boot backend)
+backend/target/
+*.class
+
+# Runtime-generated meeting file storage (app data, not source)
+backend/meetings-data/
+
+# Angular frontend
+frontend/node_modules/
+frontend/dist/
+
+# OpenClaw workspace secrets (real values live in openclaw-workspace/.env)
+openclaw-workspace/.env
+
+# OpenClaw auto-generated workspace files (created on first agent boot)
+openclaw-workspace/BOOTSTRAP.md
+openclaw-workspace/SOUL.md
+openclaw-workspace/IDENTITY.md
+openclaw-workspace/USER.md
+openclaw-workspace/memory/
+openclaw-workspace/media/
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+# ...but always commit the example templates (they contain no secrets)
+!.env.local.example
+!openclaw-workspace/.env.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+/src/generated/prisma
